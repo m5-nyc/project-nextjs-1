@@ -1,17 +1,26 @@
 import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 import axios from 'axios';
 
 export default class extends React.Component {
-    // Async operations with getInitialProps
-    static async getInitialProps(){
-        // res is assigned the response once the axios
-        // async get is completed
-        const res = await axios.get('http://api.football-data.org/v1/competitions/426/leagueTable');
-        // return properties
-        return {data: res.data}
+
+    static async getInitialProps() {
+        if (!process.browser) {
+            const res = await axios.get('http://api.football-data.org/v1/competitions/426/leagueTable');
+            return {data: res.data}
+        } else {
+            return {data: JSON.parse(sessionStorage.getItem('bpl'))}
+        }
     }
+    componentDidMount () {
+
+        if(!sessionStorage.getItem('bpl')) sessionStorage.setItem('bpl', JSON.stringify(this.props.data))
+}
     render () {
+        const logoStyle = {
+            width: '30px'
+        }
         return (
             <div>
                 <Head>
@@ -33,6 +42,7 @@ export default class extends React.Component {
                                   <th>W</th>
                                   <th>D</th>
                                   <th>L</th>
+                                  <th></th>
                               </tr>
                             </thead>
                             <tbody>
@@ -47,6 +57,7 @@ export default class extends React.Component {
                                         <td>{standing.wins}</td>
                                         <td>{standing.draws}</td>
                                         <td>{standing.losses}</td>
+                                        <td><Link href={`/details?id=${standing.position}`}>More...</Link></td>
                                     </tr>
                                     );
                             })}
