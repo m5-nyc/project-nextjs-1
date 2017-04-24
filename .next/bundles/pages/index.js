@@ -7,7 +7,7 @@ webpackJsonp([5],{
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(__resourceQuery) {
+/* WEBPACK VAR INJECTION */(function(process, __resourceQuery) {
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -20,6 +20,10 @@ var _regenerator2 = _interopRequireDefault(_regenerator);
 var _asyncToGenerator2 = __webpack_require__(63);
 
 var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
+
+var _stringify = __webpack_require__(594);
+
+var _stringify2 = _interopRequireDefault(_stringify);
 
 var _getPrototypeOf = __webpack_require__(45);
 
@@ -49,6 +53,10 @@ var _head = __webpack_require__(201);
 
 var _head2 = _interopRequireDefault(_head);
 
+var _link = __webpack_require__(596);
+
+var _link2 = _interopRequireDefault(_link);
+
 var _axios = __webpack_require__(571);
 
 var _axios2 = _interopRequireDefault(_axios);
@@ -68,158 +76,179 @@ var _class = function (_React$Component) {
     }
 
     (0, _createClass3.default)(_class, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+
+            if (!sessionStorage.getItem('bpl')) sessionStorage.setItem('bpl', (0, _stringify2.default)(this.props.data));
+        }
+    }, {
         key: 'render',
         value: function render() {
+            var logoStyle = {
+                width: '30px'
+            };
             return _react2.default.createElement('div', {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 16
-                }
-            }, _react2.default.createElement(_head2.default, {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 17
-                }
-            }, _react2.default.createElement('title', {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 18
-                }
-            }, 'League Table'), _react2.default.createElement('meta', { name: 'viewport', content: 'initial-scale=1.0, width=device-width', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 19
-                }
-            }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/purecss@0.6.1/build/pure-min.css', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 20
-                }
-            })), _react2.default.createElement('div', { className: 'pure-g', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 22
-                }
-            }, _react2.default.createElement('div', { className: 'pure-u-1-3', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 23
-                }
-            }), _react2.default.createElement('div', { className: 'pure-u-1-3', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 24
-                }
-            }, _react2.default.createElement('h1', {
                 __source: {
                     fileName: _jsxFileName,
                     lineNumber: 25
                 }
-            }, 'Barclays Premier League'), _react2.default.createElement('table', { className: 'pure-table', __source: {
+            }, _react2.default.createElement(_head2.default, {
+                __source: {
                     fileName: _jsxFileName,
                     lineNumber: 26
                 }
-            }, _react2.default.createElement('thead', {
+            }, _react2.default.createElement('title', {
                 __source: {
                     fileName: _jsxFileName,
                     lineNumber: 27
                 }
-            }, _react2.default.createElement('tr', {
-                __source: {
+            }, 'League Table'), _react2.default.createElement('meta', { name: 'viewport', content: 'initial-scale=1.0, width=device-width', __source: {
                     fileName: _jsxFileName,
                     lineNumber: 28
                 }
-            }, _react2.default.createElement('th', {
-                __source: {
+            }), _react2.default.createElement('link', { rel: 'stylesheet', href: 'https://unpkg.com/purecss@0.6.1/build/pure-min.css', __source: {
                     fileName: _jsxFileName,
                     lineNumber: 29
                 }
-            }, 'Position'), _react2.default.createElement('th', {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 30
-                }
-            }, 'Team'), _react2.default.createElement('th', {
-                __source: {
+            })), _react2.default.createElement('div', { className: 'pure-g', __source: {
                     fileName: _jsxFileName,
                     lineNumber: 31
                 }
-            }, 'P'), _react2.default.createElement('th', {
-                __source: {
+            }, _react2.default.createElement('div', { className: 'pure-u-1-3', __source: {
                     fileName: _jsxFileName,
                     lineNumber: 32
                 }
-            }, 'GL'), _react2.default.createElement('th', {
-                __source: {
+            }), _react2.default.createElement('div', { className: 'pure-u-1-3', __source: {
                     fileName: _jsxFileName,
                     lineNumber: 33
                 }
-            }, 'W'), _react2.default.createElement('th', {
+            }, _react2.default.createElement('h1', {
                 __source: {
                     fileName: _jsxFileName,
                     lineNumber: 34
                 }
-            }, 'D'), _react2.default.createElement('th', {
-                __source: {
+            }, 'Barclays Premier League'), _react2.default.createElement('table', { className: 'pure-table', __source: {
                     fileName: _jsxFileName,
                     lineNumber: 35
                 }
-            }, 'L'))), _react2.default.createElement('tbody', {
+            }, _react2.default.createElement('thead', {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 36
+                }
+            }, _react2.default.createElement('tr', {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 37
+                }
+            }, _react2.default.createElement('th', {
                 __source: {
                     fileName: _jsxFileName,
                     lineNumber: 38
+                }
+            }, 'Position'), _react2.default.createElement('th', {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 39
+                }
+            }, 'Team'), _react2.default.createElement('th', {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 40
+                }
+            }, 'P'), _react2.default.createElement('th', {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 41
+                }
+            }, 'GL'), _react2.default.createElement('th', {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 42
+                }
+            }, 'W'), _react2.default.createElement('th', {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 43
+                }
+            }, 'D'), _react2.default.createElement('th', {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 44
+                }
+            }, 'L'), _react2.default.createElement('th', {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 45
+                }
+            }))), _react2.default.createElement('tbody', {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 48
                 }
             }, this.props.data.standing.map(function (standing, i) {
                 var oddOrNot = i % 2 == 1 ? "pure-table-odd" : "";
                 return _react2.default.createElement('tr', { key: i, className: oddOrNot, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 42
+                        lineNumber: 52
                     }
                 }, _react2.default.createElement('td', {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 43
+                        lineNumber: 53
                     }
                 }, standing.position), _react2.default.createElement('td', {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 44
+                        lineNumber: 54
                     }
                 }, _react2.default.createElement('img', { className: 'pure-img logo', src: standing.crestURI, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 44
+                        lineNumber: 54
                     }
                 })), _react2.default.createElement('td', {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 45
+                        lineNumber: 55
                     }
                 }, standing.points), _react2.default.createElement('td', {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 46
+                        lineNumber: 56
                     }
                 }, standing.goals), _react2.default.createElement('td', {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 47
+                        lineNumber: 57
                     }
                 }, standing.wins), _react2.default.createElement('td', {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 48
+                        lineNumber: 58
                     }
                 }, standing.draws), _react2.default.createElement('td', {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 49
+                        lineNumber: 59
                     }
-                }, standing.losses));
+                }, standing.losses), _react2.default.createElement('td', {
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 60
+                    }
+                }, _react2.default.createElement(_link2.default, { href: '/details?id=' + standing.position, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 60
+                    }
+                }, 'More...')));
             })))), _react2.default.createElement('div', { className: 'pure-u-1-3', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 56
+                    lineNumber: 67
                 }
             })));
         }
     }], [{
         key: 'getInitialProps',
-
-        // Async operations with getInitialProps
         value: function () {
             var _ref = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee() {
                 var res;
@@ -227,14 +256,22 @@ var _class = function (_React$Component) {
                     while (1) {
                         switch (_context.prev = _context.next) {
                             case 0:
-                                _context.next = 2;
+                                if (process.browser) {
+                                    _context.next = 7;
+                                    break;
+                                }
+
+                                _context.next = 3;
                                 return _axios2.default.get('http://api.football-data.org/v1/competitions/426/leagueTable');
 
-                            case 2:
+                            case 3:
                                 res = _context.sent;
                                 return _context.abrupt('return', { data: res.data });
 
-                            case 4:
+                            case 7:
+                                return _context.abrupt('return', { data: JSON.parse(sessionStorage.getItem('bpl')) });
+
+                            case 8:
                             case 'end':
                                 return _context.stop();
                         }
@@ -279,7 +316,7 @@ exports.default = _class;
       }
     })(module.exports.default || module.exports, "/")
   
-/* WEBPACK VAR INJECTION */}.call(exports, "?entry"))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(42), "?entry"))
 
 /***/ }),
 
@@ -292,7 +329,7 @@ module.exports = __webpack_require__(562);
 /***/ })
 
 },[563]);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9wYWdlcz8xYWEzYmM0Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQU87Ozs7QUFDQTs7OztBQUNBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7OztpQ0FZQzttQ0FDSTs7OEJBQUE7Z0NBQ0k7QUFESjtBQUFBLCtCQUNLOzs4QkFBRDtnQ0FDSTtBQURKO0FBQUEsK0JBQ0k7OzhCQUFBO2dDQUFBO0FBQUE7QUFBQSxlQUNBLHlEQUFNLE1BQUssWUFBVyxTQUFROzhCQUE5QjtnQ0FDQTtBQURBO3dEQUNNLEtBQUksY0FBYSxNQUFLOzhCQUE1QjtnQ0FFSjtBQUZJO2lDQUVKLHVCQUFLLFdBQVU7OEJBQWY7Z0NBQ0k7QUFESjtzREFDUyxXQUFVOzhCQUFmO2dDQUNBO0FBREE7Z0NBQ0EsdUJBQUssV0FBVTs4QkFBZjtnQ0FDSTtBQURKOytCQUNJOzs4QkFBQTtnQ0FBQTtBQUFBO0FBQUEsZUFDQSxxRUFBTyxXQUFVOzhCQUFqQjtnQ0FDSTtBQURKOytCQUNJOzs4QkFBQTtnQ0FDRTtBQURGO0FBQUEsK0JBQ0U7OzhCQUFBO2dDQUNJO0FBREo7QUFBQSwrQkFDSTs7OEJBQUE7Z0NBQUE7QUFBQTtBQUFBLGVBQ0E7OzhCQUFBO2dDQUFBO0FBQUE7QUFBQSxlQUNBOzs4QkFBQTtnQ0FBQTtBQUFBO0FBQUEsZUFDQTs7OEJBQUE7Z0NBQUE7QUFBQTtBQUFBLGVBQ0E7OzhCQUFBO2dDQUFBO0FBQUE7QUFBQSxlQUNBOzs4QkFBQTtnQ0FBQTtBQUFBO0FBQUEsZUFDQTs7OEJBQUE7Z0NBQUE7QUFBQTtBQUFBLGVBR047OzhCQUFBO2dDQUNDO0FBREQ7QUFBQSxvQkFDTSxNQUFNLEtBQUssU0FBUyxJQUFJLFVBQUMsVUFBVSxHQUNyQztvQkFBTSxXQUFXLElBQUksS0FBSyxJQUFJLG1CQUM5Qjt1Q0FDSSxzQkFBSSxLQUFLLEdBQUcsV0FBVztrQ0FBdkI7b0NBQ0k7QUFESjtpQkFBQSxrQkFDSTs7a0NBQUE7b0NBQUs7QUFBTDtBQUFBLDRCQUNBOztrQ0FBQTtvQ0FBSTtBQUFKO0FBQUEsMERBQVMsV0FBVSxpQkFBZ0IsS0FBSyxTQUFTO2tDQUE3QztvQ0FDSjtBQURJO3FDQUNKOztrQ0FBQTtvQ0FBSztBQUFMO0FBQUEsNEJBQ0E7O2tDQUFBO29DQUFLO0FBQUw7QUFBQSw0QkFDQTs7a0NBQUE7b0NBQUs7QUFBTDtBQUFBLDRCQUNBOztrQ0FBQTtvQ0FBSztBQUFMO0FBQUEsNEJBQ0E7O2tDQUFBO29DQUFLO0FBQUw7QUFBQSw0QkFHWDtBQUlULDBEQUFLLFdBQVU7OEJBQWY7Z0NBS2Y7QUFMZTs7OzthQWxEaEI7Ozs7Ozs7Ozs7O3VDQUlzQixnQkFBTSxJQUFJOztpQ0FBdEI7O2lFQUVDLEVBQUMsTUFBTSxJQUFJOzs7Ozs7Ozs7Ozs7Ozs7Ozs7O0VBUEcsZ0JBQU0iLCJmaWxlIjoiYnVuZGxlcy9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCdcbmltcG9ydCBIZWFkIGZyb20gJ25leHQvaGVhZCdcbmltcG9ydCBheGlvcyBmcm9tICdheGlvcyc7XG5cbmV4cG9ydCBkZWZhdWx0IGNsYXNzIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcbiAgICAvLyBBc3luYyBvcGVyYXRpb25zIHdpdGggZ2V0SW5pdGlhbFByb3BzXG4gICAgc3RhdGljIGFzeW5jIGdldEluaXRpYWxQcm9wcygpe1xuICAgICAgICAvLyByZXMgaXMgYXNzaWduZWQgdGhlIHJlc3BvbnNlIG9uY2UgdGhlIGF4aW9zXG4gICAgICAgIC8vIGFzeW5jIGdldCBpcyBjb21wbGV0ZWRcbiAgICAgICAgY29uc3QgcmVzID0gYXdhaXQgYXhpb3MuZ2V0KCdodHRwOi8vYXBpLmZvb3RiYWxsLWRhdGEub3JnL3YxL2NvbXBldGl0aW9ucy80MjYvbGVhZ3VlVGFibGUnKTtcbiAgICAgICAgLy8gcmV0dXJuIHByb3BlcnRpZXNcbiAgICAgICAgcmV0dXJuIHtkYXRhOiByZXMuZGF0YX1cbiAgICB9XG4gICAgcmVuZGVyICgpIHtcbiAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgPEhlYWQ+XG4gICAgICAgICAgICAgICAgICAgIDx0aXRsZT5MZWFndWUgVGFibGU8L3RpdGxlPlxuICAgICAgICAgICAgICAgICAgICA8bWV0YSBuYW1lPVwidmlld3BvcnRcIiBjb250ZW50PVwiaW5pdGlhbC1zY2FsZT0xLjAsIHdpZHRoPWRldmljZS13aWR0aFwiIC8+XG4gICAgICAgICAgICAgICAgICAgIDxsaW5rIHJlbD1cInN0eWxlc2hlZXRcIiBocmVmPVwiaHR0cHM6Ly91bnBrZy5jb20vcHVyZWNzc0AwLjYuMS9idWlsZC9wdXJlLW1pbi5jc3NcIiAvPlxuICAgICAgICAgICAgICAgIDwvSGVhZD5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInB1cmUtZ1wiPlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInB1cmUtdS0xLTNcIj48L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJwdXJlLXUtMS0zXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8aDE+QmFyY2xheXMgUHJlbWllciBMZWFndWU8L2gxPlxuICAgICAgICAgICAgICAgICAgICAgICAgPHRhYmxlIGNsYXNzTmFtZT1cInB1cmUtdGFibGVcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGhlYWQ+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dHI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRoPlBvc2l0aW9uPC90aD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGg+VGVhbTwvdGg+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRoPlA8L3RoPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0aD5HTDwvdGg+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRoPlc8L3RoPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0aD5EPC90aD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGg+TDwvdGg+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3RyPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdGhlYWQ+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRib2R5PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLmRhdGEuc3RhbmRpbmcubWFwKChzdGFuZGluZywgaSkgPT4ge1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb25zdCBvZGRPck5vdCA9IGkgJSAyID09IDEgPyBcInB1cmUtdGFibGUtb2RkXCIgOiBcIlwiO1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRyIGtleT17aX0gY2xhc3NOYW1lPXtvZGRPck5vdH0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkPntzdGFuZGluZy5wb3NpdGlvbn08L3RkPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD48aW1nIGNsYXNzTmFtZT1cInB1cmUtaW1nIGxvZ29cIiBzcmM9e3N0YW5kaW5nLmNyZXN0VVJJfS8+PC90ZD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQ+e3N0YW5kaW5nLnBvaW50c308L3RkPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD57c3RhbmRpbmcuZ29hbHN9PC90ZD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQ+e3N0YW5kaW5nLndpbnN9PC90ZD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQ+e3N0YW5kaW5nLmRyYXdzfTwvdGQ+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkPntzdGFuZGluZy5sb3NzZXN9PC90ZD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdHI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICApO1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0pfVxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdGJvZHk+XG4gICAgICAgICAgICAgICAgICAgICAgICA8L3RhYmxlPlxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJwdXJlLXUtMS0zXCI+PC9kaXY+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICApXG4gICAgfVxuXG59XG5cblxuXG4vLyBXRUJQQUNLIEZPT1RFUiAvL1xuLy8gLi9wYWdlcz9lbnRyeSJdLCJzb3VyY2VSb290IjoiIn0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9wYWdlcz84ZGQ4MWZiIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFPOzs7O0FBQ0E7Ozs7QUFDQTs7OztBQUNBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs0Q0FjQzs7Z0JBQUcsQ0FBQyxlQUFlLFFBQVEsUUFBUSxlQUFlLFFBQVEsT0FBTyx5QkFBZSxLQUFLLE1BQzVGOzs7O2lDQUVPO2dCQUFNO3VCQUdOO0FBRkk7bUNBR0E7OzhCQUFBO2dDQUNJO0FBREo7QUFBQSwrQkFDSzs7OEJBQUQ7Z0NBQ0k7QUFESjtBQUFBLCtCQUNJOzs4QkFBQTtnQ0FBQTtBQUFBO0FBQUEsZUFDQSx5REFBTSxNQUFLLFlBQVcsU0FBUTs4QkFBOUI7Z0NBQ0E7QUFEQTt3REFDTSxLQUFJLGNBQWEsTUFBSzs4QkFBNUI7Z0NBRUo7QUFGSTtpQ0FFSix1QkFBSyxXQUFVOzhCQUFmO2dDQUNJO0FBREo7c0RBQ1MsV0FBVTs4QkFBZjtnQ0FDQTtBQURBO2dDQUNBLHVCQUFLLFdBQVU7OEJBQWY7Z0NBQ0k7QUFESjsrQkFDSTs7OEJBQUE7Z0NBQUE7QUFBQTtBQUFBLGVBQ0EscUVBQU8sV0FBVTs4QkFBakI7Z0NBQ0k7QUFESjsrQkFDSTs7OEJBQUE7Z0NBQ0U7QUFERjtBQUFBLCtCQUNFOzs4QkFBQTtnQ0FDSTtBQURKO0FBQUEsK0JBQ0k7OzhCQUFBO2dDQUFBO0FBQUE7QUFBQSxlQUNBOzs4QkFBQTtnQ0FBQTtBQUFBO0FBQUEsZUFDQTs7OEJBQUE7Z0NBQUE7QUFBQTtBQUFBLGVBQ0E7OzhCQUFBO2dDQUFBO0FBQUE7QUFBQSxlQUNBOzs4QkFBQTtnQ0FBQTtBQUFBO0FBQUEsZUFDQTs7OEJBQUE7Z0NBQUE7QUFBQTtBQUFBLGVBQ0E7OzhCQUFBO2dDQUFBO0FBQUE7QUFBQSxlQUNBOzs4QkFBQTtnQ0FHTjtBQUhNO0FBQUEsa0NBR047OzhCQUFBO2dDQUNDO0FBREQ7QUFBQSxvQkFDTSxNQUFNLEtBQUssU0FBUyxJQUFJLFVBQUMsVUFBVSxHQUNyQztvQkFBTSxXQUFXLElBQUksS0FBSyxJQUFJLG1CQUM5Qjt1Q0FDSSxzQkFBSSxLQUFLLEdBQUcsV0FBVztrQ0FBdkI7b0NBQ0k7QUFESjtpQkFBQSxrQkFDSTs7a0NBQUE7b0NBQUs7QUFBTDtBQUFBLDRCQUNBOztrQ0FBQTtvQ0FBSTtBQUFKO0FBQUEsMERBQVMsV0FBVSxpQkFBZ0IsS0FBSyxTQUFTO2tDQUE3QztvQ0FDSjtBQURJO3FDQUNKOztrQ0FBQTtvQ0FBSztBQUFMO0FBQUEsNEJBQ0E7O2tDQUFBO29DQUFLO0FBQUw7QUFBQSw0QkFDQTs7a0NBQUE7b0NBQUs7QUFBTDtBQUFBLDRCQUNBOztrQ0FBQTtvQ0FBSztBQUFMO0FBQUEsNEJBQ0E7O2tDQUFBO29DQUFLO0FBQUw7QUFBQSw0QkFDQTs7a0NBQUE7b0NBQUk7QUFBSjtBQUFBLG1DQUFLLGdDQUFLLHVCQUFxQixTQUFTO2tDQUFwQztvQ0FBQTtBQUFBO21CQUdmO0FBSVQsMERBQUssV0FBVTs4QkFBZjtnQ0FLZjtBQUxlOzs7Ozs7Ozs7Ozs7b0NBMURQLFFBQVE7Ozs7Ozt1Q0FDUyxnQkFBTSxJQUFJOztpQ0FBdEI7O2lFQUNDLEVBQUMsTUFBTSxJQUFJOzs7aUVBRVgsRUFBQyxNQUFNLEtBQUssTUFBTSxlQUFlLFFBQVE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7RUFQL0IsZ0JBQU0iLCJmaWxlIjoiYnVuZGxlcy9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCdcbmltcG9ydCBIZWFkIGZyb20gJ25leHQvaGVhZCdcbmltcG9ydCBMaW5rIGZyb20gJ25leHQvbGluaydcbmltcG9ydCBheGlvcyBmcm9tICdheGlvcyc7XG5cbmV4cG9ydCBkZWZhdWx0IGNsYXNzIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcblxuICAgIHN0YXRpYyBhc3luYyBnZXRJbml0aWFsUHJvcHMoKSB7XG4gICAgICAgIGlmICghcHJvY2Vzcy5icm93c2VyKSB7XG4gICAgICAgICAgICBjb25zdCByZXMgPSBhd2FpdCBheGlvcy5nZXQoJ2h0dHA6Ly9hcGkuZm9vdGJhbGwtZGF0YS5vcmcvdjEvY29tcGV0aXRpb25zLzQyNi9sZWFndWVUYWJsZScpO1xuICAgICAgICAgICAgcmV0dXJuIHtkYXRhOiByZXMuZGF0YX1cbiAgICAgICAgfSBlbHNlIHtcbiAgICAgICAgICAgIHJldHVybiB7ZGF0YTogSlNPTi5wYXJzZShzZXNzaW9uU3RvcmFnZS5nZXRJdGVtKCdicGwnKSl9XG4gICAgICAgIH1cbiAgICB9XG4gICAgY29tcG9uZW50RGlkTW91bnQgKCkge1xuXG4gICAgICAgIGlmKCFzZXNzaW9uU3RvcmFnZS5nZXRJdGVtKCdicGwnKSkgc2Vzc2lvblN0b3JhZ2Uuc2V0SXRlbSgnYnBsJywgSlNPTi5zdHJpbmdpZnkodGhpcy5wcm9wcy5kYXRhKSlcbn1cbiAgICByZW5kZXIgKCkge1xuICAgICAgICBjb25zdCBsb2dvU3R5bGUgPSB7XG4gICAgICAgICAgICB3aWR0aDogJzMwcHgnXG4gICAgICAgIH1cbiAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgPEhlYWQ+XG4gICAgICAgICAgICAgICAgICAgIDx0aXRsZT5MZWFndWUgVGFibGU8L3RpdGxlPlxuICAgICAgICAgICAgICAgICAgICA8bWV0YSBuYW1lPVwidmlld3BvcnRcIiBjb250ZW50PVwiaW5pdGlhbC1zY2FsZT0xLjAsIHdpZHRoPWRldmljZS13aWR0aFwiIC8+XG4gICAgICAgICAgICAgICAgICAgIDxsaW5rIHJlbD1cInN0eWxlc2hlZXRcIiBocmVmPVwiaHR0cHM6Ly91bnBrZy5jb20vcHVyZWNzc0AwLjYuMS9idWlsZC9wdXJlLW1pbi5jc3NcIiAvPlxuICAgICAgICAgICAgICAgIDwvSGVhZD5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInB1cmUtZ1wiPlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInB1cmUtdS0xLTNcIj48L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJwdXJlLXUtMS0zXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8aDE+QmFyY2xheXMgUHJlbWllciBMZWFndWU8L2gxPlxuICAgICAgICAgICAgICAgICAgICAgICAgPHRhYmxlIGNsYXNzTmFtZT1cInB1cmUtdGFibGVcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGhlYWQ+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dHI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRoPlBvc2l0aW9uPC90aD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGg+VGVhbTwvdGg+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRoPlA8L3RoPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0aD5HTDwvdGg+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRoPlc8L3RoPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0aD5EPC90aD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGg+TDwvdGg+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRoPjwvdGg+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3RyPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdGhlYWQ+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRib2R5PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLmRhdGEuc3RhbmRpbmcubWFwKChzdGFuZGluZywgaSkgPT4ge1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb25zdCBvZGRPck5vdCA9IGkgJSAyID09IDEgPyBcInB1cmUtdGFibGUtb2RkXCIgOiBcIlwiO1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRyIGtleT17aX0gY2xhc3NOYW1lPXtvZGRPck5vdH0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkPntzdGFuZGluZy5wb3NpdGlvbn08L3RkPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD48aW1nIGNsYXNzTmFtZT1cInB1cmUtaW1nIGxvZ29cIiBzcmM9e3N0YW5kaW5nLmNyZXN0VVJJfS8+PC90ZD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQ+e3N0YW5kaW5nLnBvaW50c308L3RkPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD57c3RhbmRpbmcuZ29hbHN9PC90ZD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQ+e3N0YW5kaW5nLndpbnN9PC90ZD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQ+e3N0YW5kaW5nLmRyYXdzfTwvdGQ+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkPntzdGFuZGluZy5sb3NzZXN9PC90ZD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQ+PExpbmsgaHJlZj17YC9kZXRhaWxzP2lkPSR7c3RhbmRpbmcucG9zaXRpb259YH0+TW9yZS4uLjwvTGluaz48L3RkPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90cj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICk7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgfSl9XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90Ym9keT5cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvdGFibGU+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInB1cmUtdS0xLTNcIj48L2Rpdj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgIClcbiAgICB9XG5cbn1cblxuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyAuL3BhZ2VzP2VudHJ5Il0sInNvdXJjZVJvb3QiOiIifQ==
             return { page: comp.default }
           })
         
